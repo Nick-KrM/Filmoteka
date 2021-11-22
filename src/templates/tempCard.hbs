@@ -1,0 +1,21 @@
+{{#each this}}
+<li class="film-card">
+
+  <div class="close-btn not-visible" data-id="{{id}}">
+    <span class="visually-hidden">close-button</span>
+  </div>
+
+  <img class="film-cover" src="{{poster_path}}" alt="{{original_title}}" data-id="{{id}}" />
+  <div class="film-info-wrapper">
+    <h3 class="film-name" data-id="{{id}}">{{original_title}} </h3>
+    <div class="film-info-inner">
+      <p class="film-info">
+        <span class="film-genre">{{genre_ids}}</span>
+        |
+        <span class="film-year">{{release_date}}</span>
+      </p>
+      <span class="film-rating">{{vote_average}}</span>
+    </div>
+  </div>
+</li>
+{{/each}}

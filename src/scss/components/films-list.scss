@@ -1,0 +1,19 @@
+.films-list {
+  padding: 30px 0;
+  @extend %list;
+
+  @include tablets {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    @include desktop {
+      justify-content: flex-start;
+    }
+  }
+}
+
+.film-info-wrapper {
+  padding: 0 10px;
+}

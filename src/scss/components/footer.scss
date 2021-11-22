@@ -1,0 +1,75 @@
+.footer {
+  min-height: 105px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f7f7;
+}
+
+.copyright-block {
+  text-align: center;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.copyright-text {
+  position: relative;
+  padding-left: 18px;
+  @include push-tablets;
+  margin-bottom: 9px;
+  display: block;
+  width: 245px;
+  color: $main-black;
+  opacity: 0.8;
+
+  @include tablets {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background-image: url(./images/icons/copyright-24px.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.this-heard {
+  position: relative;
+  padding-left: 18px;
+  color: #6b6a6a;
+
+  &::before {
+    content: '';
+    margin-right: 3px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background-image: url(./images/icons/favorite-heart-button.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.copyright-link {
+  color: #6b6a6a;
+}
+
+.team-link {
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+  font-size: 12px;
+}

@@ -1,0 +1,83 @@
+.pagination {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  border-radius: 4px;
+  bottom: 20px;
+
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.pag-number {
+  display: flex;
+}
+
+.pagination button,
+.pagination i {
+  min-width: 30px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  font-size: 13px;
+  background: transparent;
+  border: none;
+  border-radius: 5px;
+
+  @include phones {
+    width: 40px;
+  }
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: $details-grey + 80%;
+  }
+
+  &:focus {
+    outline: $color-accent 1px solid;
+  }
+}
+
+.pagination i {
+  color: black;
+  font-weight: bold;
+}
+
+.pagination button.current {
+  background-color: $color-accent;
+  color: white;
+}
+
+.pagination .arrow {
+  border: none;
+  width: 30px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 5px;
+  cursor: pointer;
+
+  @include phones {
+    width: 40px;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    background-color: transparent;
+    cursor: default;
+  }
+}
+
+.pagination .arrow-left {
+  background-image: url('images/icons/arrow-left.svg');
+}
+
+.pagination .arrow-right {
+  background-image: url('images/icons/arrow-right.svg');
+}

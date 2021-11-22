@@ -1,0 +1,51 @@
+.authorization-block {
+  margin-bottom: 25px;
+  display: flex;
+  font-size: 12px;
+  color: $main-white;
+}
+
+.wrapper-btn {
+  display: none;
+}
+
+.btn-default {
+  padding: 3px 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 3px;
+  color: $main-white;
+  background: $color-accent;
+  cursor: pointer;
+  @include transition;
+
+  &:hover {
+    box-shadow: 0 0 10px $color-accent;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.btn-reg {
+  margin-left: 10px;
+}
+
+.authorization-block__data {
+  display: none;
+  margin-left: auto;
+}
+
+.isonline-active {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.username {
+  margin: 0 8px;
+  font-size: 14px;
+  text-transform: uppercase;
+}

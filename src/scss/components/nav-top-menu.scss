@@ -1,0 +1,29 @@
+.nav-top-menu a {
+  display: block;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #fff;
+  border: 2px solid transparent;
+  transition: all 0.2s linear;
+  @extend %list;
+  // @extend %link;
+  // @extend %link:hover;
+
+  &:hover,
+  &.active-menu {
+    border-bottom: 2px solid #ff6b08;
+  }
+}
+
+.top-menu-list {
+  @extend %list;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.top-menu-item:last-child {
+  margin-left: 36px;
+}

@@ -1,0 +1,135 @@
+.section-top {
+  padding-top: 15px;
+  padding-bottom: 20px;
+  min-height: 230px;
+  background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.56) 0%,
+      rgba(0, 0, 0, 0.56) 100%
+    ),
+    url(images/bg/bg-header.jpg);
+  background-position: right 84% bottom 0%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include desktop {
+    background-position: center;
+    background-size: cover;
+  }
+}
+.section-top-details {
+  padding-top: 15px;
+  padding-bottom: 20px;
+  min-height: 230px;
+  background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.56) 0%,
+      rgba(0, 0, 0, 0.56) 100%
+    ),
+    url(images/bg/bg-header-details.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include desktop {
+    background-position: center;
+    background-size: cover;
+  }
+}
+.section-top-lib {
+  padding-top: 15px;
+  padding-bottom: 20px;
+  min-height: 230px;
+  background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.56) 0%,
+      rgba(0, 0, 0, 0.56) 100%
+    ),
+    url(images/bg/bg-header-queue.jpg);
+  background-position: right 84% bottom 0%;
+  background-repeat: no-repeat;
+
+  @include desktop {
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.header {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & a {
+    @extend %link;
+    @extend %link:hover;
+  }
+
+  & .logo {
+    opacity: 0.5;
+  }
+
+  @include tablets {
+    & .title-page {
+      margin-left: 10px;
+      display: block;
+      color: $main-white;
+    }
+
+    .title-link {
+      display: flex;
+    }
+  }
+}
+
+.header .logo {
+  opacity: 0.5;
+}
+
+.btn-container {
+  display: flex;
+  margin: auto;
+  width: 100%;
+  color: $main-white;
+  list-style: none;
+  justify-content: space-around;
+  @include phones {
+    width: 342px;
+  }
+}
+
+.btn-container-item {
+  justify-content: center;
+  display: flex;
+}
+
+.btn-container-item a {
+  display: block;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 12px;
+  width: 130px;
+  height: 45px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: $main-white;
+  border: 1px solid;
+  padding-top: 15px;
+  border-radius: 5px;
+  @include transition;
+
+  &:hover,
+  &:focus {
+    background-color: $color-accent;
+  }
+}
+.active a {
+  background-color: $color-accent;
+}
+
+.title-page:hover {
+  @include transition;
+  color: $color-accent;
+}

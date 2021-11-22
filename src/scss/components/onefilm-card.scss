@@ -1,0 +1,119 @@
+.onefilm-card {
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+
+  @include tablets {
+    display: flex;
+    justify-content: space-between;
+    width: 620px;
+  }
+
+  @include desktop {
+    display: flex;
+    width: 876px;
+  }
+}
+
+.onefilm-cover {
+  object-fit: cover;
+  width: 100%;
+  height: 400px;
+  border-radius: 5px;
+
+  @include tablets {
+    width: 295px;
+    height: 420px;
+  }
+
+  @include desktop {
+    width: 420px;
+    height: 620px;
+  }
+}
+
+.onefilm-info-wrapper {
+  @include tablets {
+    width: 295px;
+  }
+
+  @include desktop {
+    width: 423px;
+  }
+}
+
+.onefilm-name {
+  font-size: 20px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.onefilm__rating {
+  display: flex;
+  line-height: 28px;
+  margin-bottom: 20px;
+}
+
+.rating__titles {
+  width: 120px;
+  color: $details-grey;
+}
+
+.onefilm__about {
+  font-size: 11px;
+  line-height: 20px;
+}
+
+.buttons__block {
+  margin-top: 25px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-evenly;
+
+  @include tablets {
+    justify-content: start;
+  }
+
+  @include desktop {
+    justify-content: start;
+  }
+}
+
+.onefilm__btn {
+  padding: 12px;
+  min-width: 120px;
+  line-height: 16px;
+  font-size: 12px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  background-color: $main-white;
+  cursor: pointer;
+  @include transition;
+
+  &:hover,
+  &:disabled {
+    color: $main-white;
+    background-color: #ff6b08;
+    outline: none;
+    border: 2px solid #ff6b08;
+  }
+
+  &:disabled {
+    cursor: default;
+  }
+
+  @include tablets {
+    &:first-child {
+      margin-right: 15px;
+    }
+  }
+
+  @include desktop {
+    &:first-child {
+      margin-right: 15px;
+    }
+  }
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Filmoteka</title>
+
+    <link rel="shortcut icon" href="favicon.png" type="image/png" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="content">
+        <section class="head-background section-top">
+          <div class="container">
+            <header class="header">
+              <h1>
+                <a class="title-link" href="./index.html">
+                  <img
+                    class="logo"
+                    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0iZmVhdGhlciBmZWF0aGVyLWZpbG0iPjxyZWN0IHg9IjIiIHk9IjIiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgcng9IjIuMTgiIHJ5PSIyLjE4Ij48L3JlY3Q+PGxpbmUgeDE9IjciIHkxPSIyIiB4Mj0iNyIgeTI9IjIyIj48L2xpbmU+PGxpbmUgeDE9IjE3IiB5MT0iMiIgeDI9IjE3IiB5Mj0iMjIiPjwvbGluZT48bGluZSB4MT0iMiIgeTE9IjEyIiB4Mj0iMjIiIHkyPSIxMiI+PC9saW5lPjxsaW5lIHgxPSIyIiB5MT0iNyIgeDI9IjciIHkyPSI3Ij48L2xpbmU+PGxpbmUgeDE9IjIiIHkxPSIxNyIgeDI9IjciIHkyPSIxNyI+PC9saW5lPjxsaW5lIHgxPSIxNyIgeTE9IjE3IiB4Mj0iMjIiIHkyPSIxNyI+PC9saW5lPjxsaW5lIHgxPSIxNyIgeTE9IjciIHgyPSIyMiIgeTI9IjciPjwvbGluZT48L3N2Zz4="
+                    alt="logo"
+                  />
+                  <span class="title-page not-visible">Filmoteka</span>
+                </a>
+              </h1>
+
+              <nav class="nav-top-menu">
+                <ul class="top-menu-list">
+                  <li class="top-menu-item home">
+                    <a class="active-menu" href="#">Home</a>
+                  </li>
+                  <li class="top-menu-item library-button not-visible">
+                    <a href="#">My library</a>
+                  </li>
+                </ul>
+              </nav>
+            </header>
+
+            <div class="authorization-block">
+              <div class="wrapper-btn isonline-active">
+                <button class="btn-login btn-default">
+                  Log In
+                </button>
+                <button class="btn-reg btn-default">
+                  Registration
+                </button>
+              </div>
+              <div class="authorization-block__data">
+                <div class="wrapper-user-name">
+                  <span>Hello, </span>
+                  <span class="username"></span>
+                </div>
+                <button class="btn-logout btn-default">Log out</button>
+              </div>
+            </div>
+
+            <form class="search-block">
+              <input
+                class="top-search"
+                type="text"
+                name="search"
+                placeholder="Search films..."
+              />
+              <button class="top-search-btn">
+                <img
+                  src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0iZmVhdGhlciBmZWF0aGVyLXNlYXJjaCI+PGNpcmNsZSBjeD0iMTEiIGN5PSIxMSIgcj0iOCI+PC9jaXJjbGU+PGxpbmUgeDE9IjIxIiB5MT0iMjEiIHgyPSIxNi42NSIgeTI9IjE2LjY1Ij48L2xpbmU+PC9zdmc+"
+                  alt="search"
+                />
+              </button>
+            </form>
+
+            <div class="error-block">
+              <p class="error-search search-wrong">
+                Search result not successful. Enter the correct movie name and
+                try again.
+              </p>
+
+              <p class="error-search search-null">
+                Please enter search word
+              </p>
+            </div>
+
+            <ul class="btn-container">
+              <li class="btn-container-item watched-button visually-hidden">
+                <a href="#">WATCHED</a>
+              </li>
+              <li class="btn-container-item queue-button visually-hidden">
+                <a href="#">QUEUE</a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <main>
+          <section class="section-films">
+            <div class="container">
+              <h2 class="visually-hidden">Films list</h2>
+
+              <div class="wrapper-films">
+                <div class="back-btn not-visible">
+                  <span class="visually-hidden">back button</span>
+                </div>
+                <ul class="films-list"></ul>
+
+                <!-- spinner START -->
+                <div class="cssload-dots not-visible">
+                  <div class="cssload-dot"></div>
+                  <div class="cssload-dot"></div>
+                  <div class="cssload-dot"></div>
+                  <div class="cssload-dot"></div>
+                  <div class="cssload-dot"></div>
+                </div>
+
+                <svg
+                  class="spinner not-visible"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <defs>
+                    <filter id="goo">
+                      <fegaussianblur
+                        in="SourceGraphic"
+                        result="blur"
+                        stddeviation="12"
+                      ></fegaussianblur>
+                      <fecolormatrix
+                        in="blur"
+                        values="1 0 0 0 0	0 1 0 0 0	0 0 1 0 0	0 0 0 18 -7"
+                        result="goo"
+                      ></fecolormatrix>
+                    </filter>
+                  </defs>
+                </svg>
+                <!-- spinner END -->
+
+                <!-- <button id="next-btn" class="start-next-page">next</button> -->
+
+                <div id="pagination" class="pagination"></div>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="copyright-block">
+            <p class="copyright-text">
+              2020 | All Rights Reserved Developed with
+            </p>
+            <span class="this-heard">by</span>
+            <a
+              class="copyright-link"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GoIT Students
+            </a>
+          </div>
+          <a
+            class="copyright-link team-link"
+            href="https://github.com/LomastersCoda"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            by LomastersCoda
+          </a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
